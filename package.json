@@ -1,0 +1,17 @@
+{
+  "name": "actions_demo",
+  "version": "1.0.0",
+  "description": "GitHub ActionsでClaude Codeを使用するデモプロジェクト",
+  "main": "src/calculator.js",
+  "scripts": {
+    "test": "node --test src/calculator.test.js"
+  },
+  "keywords": [
+    "github-actions",
+    "claude-code",
+    "demo"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

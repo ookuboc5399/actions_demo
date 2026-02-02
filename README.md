@@ -59,6 +59,33 @@ actions_demo/
 2. 新しいIssueを作成し、`@claude` を含める
 3. Claudeが自動的に応答し、必要に応じてPRを作成します
 
+## トラブルシューティング
+
+### Claudeが`@claude`コマンドに応答しない場合
+
+1. **GitHub Appの確認**
+   - [Claude GitHubアプリ](https://github.com/apps/claude)がリポジトリにインストールされているか確認
+   - 必要な権限（Contents、Issues、Pull requests）が許可されているか確認
+
+2. **ワークフローの実行確認**
+   - GitHubリポジトリの「Actions」タブでワークフローが実行されているか確認
+   - エラーログがないか確認
+
+3. **シークレットの確認**
+   - `CLAUDE_API_KEY`がリポジトリのSecretsに正しく設定されているか確認
+   - APIキーが有効で、十分な権限があるか確認
+
+4. **Issueの内容確認**
+   - Issueの本文に正確に`@claude`が含まれているか確認（`/claude`ではなく`@claude`）
+
+5. **ワークフローファイルの確認**
+   - `.github/workflows/claude.yml`が正しくコミット・プッシュされているか確認
+
+### CIがClaudeのコミットで実行されない場合
+
+- GitHub Appまたはカスタムアプリを使用していることを確認（Actionsユーザーではなく）
+- ワークフロートリガーに必要なイベントが含まれていることを確認
+
 ## 参考リンク
 
 - [Claude Code GitHub Actions ドキュメント](https://code.claude.com/docs/ja/github-actions)

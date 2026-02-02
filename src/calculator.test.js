@@ -34,5 +34,12 @@ describe('Calculator', () => {
   test('ゼロ除算でエラーが発生する', () => {
     expect(() => calculator.divide(5, 0)).toThrow('ゼロ除算はできません');
   });
+
+  test('累乗が正しく動作する', () => {
+    expect(calculator.power(2, 3)).toBe(8);
+    expect(calculator.power(5, 2)).toBe(25);
+    expect(calculator.power(10, 0)).toBe(1);
+    expect(calculator.power(2, -1)).toBe(0.5);
+  });
 });
 

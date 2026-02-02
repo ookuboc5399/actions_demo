@@ -47,6 +47,16 @@ class Calculator {
     }
     return a / b;
   }
+
+  /**
+   * 累乗を計算する
+   * @param {number} base - 底
+   * @param {number} exponent - 指数
+   * @returns {number} 累乗結果
+   */
+  power(base, exponent) {
+    return Math.pow(base, exponent);
+  }
 }
 
 module.exports = Calculator;
